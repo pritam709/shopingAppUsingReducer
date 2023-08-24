@@ -4,7 +4,7 @@ import {  useSelector } from 'react-redux/es/hooks/useSelector';
 import { cartActions } from '../../store/cartSlice';
 const CartButton = (props) => {
   const dispatch =useDispatch();
- const items= useSelector(state=>state.items);
+ const items= useSelector(state=>state.cart.items);
  const totalItems= items.reduce((curr,item)=>{
   return curr+item.quantity;
  },0)
